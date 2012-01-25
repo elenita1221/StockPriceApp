@@ -14,7 +14,8 @@ def hello():
 
 @app.route('/stock/<symbol>')
 def stock(symbol):
-    p = __request(symbol, 'l1c1va2xj1b4j4dyekjm3m4rr5p5p6s7').split(',')[0]
+    # p = __request(symbol, 'l1c1va2xj1b4j4dyekjm3m4rr5p5p6s7').split(',')[0]
+    p = __request(symbol, 'l1')
     return '%s : %s' % (symbol, p)
 
 if __name__ == '__main__':
