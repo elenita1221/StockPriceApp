@@ -7,9 +7,9 @@ app = Flask(__name__)
 def hello():
     return 'What\'s up, Lance?'
 
-@app.route('/stock')
-def stock():
-    return 'What is the stock price?'
+@app.route('/stock/<symbol>')
+def stock(symbol):
+    return 'Ticker Symbol: %s' % symbol
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000
